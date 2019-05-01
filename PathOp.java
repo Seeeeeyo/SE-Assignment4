@@ -1,14 +1,16 @@
 package svg.shape;
 
+import svg.SVGParser;
 import svg.element.Element;
 
 public class PathOp extends Shape{
-	private final String label;
 	private boolean absolute;
+	private char label;
 	
 	//constructor
-	public PathOp(final String label) {
-		this.label = new String(label);
+	public PathOp() {
+		super("path");
+		
 	}
 	
 	public void setAbsolute(boolean abs) {
@@ -19,15 +21,21 @@ public class PathOp extends Shape{
 		return absolute;
 	}
 	
+	public void setLabel(final char label) {
+		this.label = label;
+	}
+	
+	public char getLabel() {
+		return label;
+	}
+	
 	public Element newInstance() {
-		//to be implemented
-		return null;
+		return new PathOp();
 	}
 
-	public boolean load(String expr) {
-		// to be implemented
+	public boolean load(final String expr) {
 		return false;
-	}
+	} 
 	
 	
 
