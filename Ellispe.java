@@ -4,12 +4,8 @@ public class Ellispe {
 	public double cy;
 	public double rx;
 	public double ry;
-	public Ellispe(double cx, double cy,double rx,double ry)
+	public Ellispe()
 	{
-		this.cx = cx;
-		this.cy = cy;
-		this.rx = rx;
-		this.ry = ry;
 		
 	}
 	

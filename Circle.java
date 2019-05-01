@@ -4,11 +4,8 @@ public class Circle extends Shape{
 	private double cy;
 	private double r;
 	
-	public Circle(double cx,double cy,double r)
+	public Circle(
 	{
-		this.cx = cx;
-		this.cy = cy;
-		this.r = r;
 	}
 	public double getCX()
 	{
@@ -35,6 +32,5 @@ public class Circle extends Shape{
 	{
 		r = radius;
 	}
-	
 
 }

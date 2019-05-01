@@ -6,14 +6,8 @@ public class Rect extends Shape{
 	private double ry;
 	private double width;
 	private double height;
-	public Rect(double x,double y,double rx,double ry,double width,double height)
+	public Rect()
 	{
-		this.rx = rx;
-		this.ry = ry;
-		this.x =x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
 		
 	}
 	public double getX()

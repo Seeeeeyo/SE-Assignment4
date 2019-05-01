@@ -3,10 +3,8 @@ public class MoveTo
 	private double x;
 	private double y;
 	
-	public MoveTo(double x, double y)
+	public MoveTo()
 	{
-		this.x = x;
-		this.y = y;
 	}
 	public double getX()
 	{
