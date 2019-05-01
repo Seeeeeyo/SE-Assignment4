@@ -1,3 +1,5 @@
-public class Close
-{
+package svg.shape;
+
+public class Close {
+
 }
