@@ -6,7 +6,7 @@ public class Ellispe {
 	public double ry;
 	public Ellispe()
 	{
-		
+		super("Ellipse");
 	}
 	
 	public void setcx(double cx)
@@ -43,5 +43,39 @@ public class Ellispe {
 		return ry;
 	}
 	
+	@Override
+	public Element newInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean load(String expr) {
+		if(expr.contains(" cx=")) {
+			final Double result = SVGParser.extractDouble(expr, " cx=");
+			if(result != null) {
+				cx = result.doubleValue();
+			}
+		}
+		if(expr.contains(" cy=")) {
+			final Double resultTwo = SVGParser.extractDouble(expr, " cy=");
+			if(resultTwo != null) {
+				cy = resultTwo.doubleValue();
+			}
+		}
+		if(expr.contains(" rx=")) {
+			final Double resultThree = SVGParser.extractDouble(expr, " rx=");
+			if(resultThree != null) {
+				rx = resultThree.doubleValue();
+			}
+		}
+		if(expr.contains(" ry=")) {
+			final Double resultFour = SVGParser.extractDouble(expr, " ry=");
+			if(resultFour != null) {
+				ry = resultFour.doubleValue();
+			}
+		}
+		return false;
+	}
 
 }
