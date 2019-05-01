@@ -6,7 +6,7 @@ public class Line extends svg.element.Shape.Shape {
 	private double y2;
 	public Line()
 	{
-		
+		super("Line");
 	}
 	
 	public void setX1(double x1)
@@ -43,7 +43,40 @@ public class Line extends svg.element.Shape.Shape {
 		return y2;
 	}
 
-	public
+	@Override
+	public Element newInstance() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean load(String expr) {
+		if(expr.contains(" x1=")) {
+			final Double result = SVGParser.extractDouble(expr, " x1=");
+			if(result != null) {
+				x1= result.doubleValue();
+			}
+		}
+		if(expr.contains(" y1=")) {
+			final Double resultTwo = SVGParser.extractDouble(expr, " y1=");
+			if(resultTwo != null) {
+				y1 = resultTwo.doubleValue();
+			}
+		}
+		if(expr.contains(" x2=")) {
+			final Double resultThree = SVGParser.extractDouble(expr, " x2=");
+			if(resultThree != null) {
+				x2= resultThree.doubleValue();
+			}
+		}
+		if(expr.contains(" y2=")) {
+			final Double resultFour = SVGParser.extractDouble(expr, " y2=");
+			if(resultFour != null) {
+				y2 = resultFour.doubleValue();
+			}
+		}
+		return false;
+	}
 	
 
 }
