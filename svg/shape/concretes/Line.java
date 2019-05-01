@@ -1,5 +1,6 @@
 package svg.shape.concretes;
 
+import svg.SVGParser;
 import svg.element.Element;
 
 

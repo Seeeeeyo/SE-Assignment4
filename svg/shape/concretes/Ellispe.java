@@ -1,8 +1,11 @@
 
 package svg.shape.concretes;
 
+import svg.SVGParser;
+import svg.element.Element;
+import svg.element.Shape.Shape;
 
-public class Ellispe {
+public class Ellispe extends Shape {
 	public double cx;
 	public double cy;
 	public double rx;
@@ -46,13 +49,11 @@ public class Ellispe {
 		return ry;
 	}
 	
-	@Override
 	public Element newInstance() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public boolean load(String expr) {
 		if(expr.contains(" cx=")) {
 			final Double result = SVGParser.extractDouble(expr, " cx=");

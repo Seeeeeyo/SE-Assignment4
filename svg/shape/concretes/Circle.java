@@ -1,5 +1,6 @@
 
 package svg.shape.concretes;
+import svg.SVGParser;
 import svg.element.Element;
 import svg.element.Shape.Shape;
 
@@ -9,7 +10,7 @@ public class Circle extends Shape{
 	private double cy;
 	private double r;
 	
-	public Circle(
+	public Circle()
 	{
 		super("Circle");
 	}
