@@ -22,12 +22,12 @@ public class Circle extends Shape{
 	{
 		return r;
 	}
-	public void setRX(double cx)
+	public void setCX(double cx)
 	
 	{
 	this.cx = cx;
 	}
-	public void setRY(double cy)
+	public void setCY(double cy)
 	{
 		this.cy = cy;
 	}
