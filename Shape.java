@@ -1,4 +1,11 @@
+package svg.element.Shape;
 
-public abstract class Shape extends BaseElement {
-	
+import svg.element.*;
+
+public abstract class Shape extends BaseElement
+{
+    public Shape(String shapeType)
+    {
+        super(shapeType);
+    }
 }
