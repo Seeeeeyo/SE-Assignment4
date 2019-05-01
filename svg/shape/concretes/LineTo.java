@@ -8,7 +8,7 @@ public class LineTo extends PathOp{
 	private double y;
 	public LineTo()
 	{
-		super("line to");
+		super();
 	}
 	
 	public Element newInstance() {

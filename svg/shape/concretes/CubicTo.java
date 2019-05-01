@@ -14,7 +14,7 @@ public class CubicTo extends PathOp{
 	 
 	public CubicTo()
 	{
-		super("cubicto");
+		super();
 		
 	}
 	public Element newInstance() {
