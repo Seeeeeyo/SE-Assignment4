@@ -2,6 +2,7 @@ package svg.shape.concretes;
 
 import svg.element.Element;
 
+
 public class Line extends svg.element.Shape.Shape {
 	private double x1;
 	private double y1;
@@ -9,7 +10,7 @@ public class Line extends svg.element.Shape.Shape {
 	private double y2;
 	public Line()
 	{
-		super("line");
+		super("Line");
 	}
 	
 	public void setX1(double x1)
@@ -54,10 +55,33 @@ public class Line extends svg.element.Shape.Shape {
 
 	@Override
 	public boolean load(String expr) {
-		// TODO Auto-generated method stub
+		if(expr.contains(" x1=")) {
+			final Double result = SVGParser.extractDouble(expr, " x1=");
+			if(result != null) {
+				x1= result.doubleValue();
+			}
+		}
+		if(expr.contains(" y1=")) {
+			final Double resultTwo = SVGParser.extractDouble(expr, " y1=");
+			if(resultTwo != null) {
+				y1 = resultTwo.doubleValue();
+			}
+		}
+		if(expr.contains(" x2=")) {
+			final Double resultThree = SVGParser.extractDouble(expr, " x2=");
+			if(resultThree != null) {
+				x2= resultThree.doubleValue();
+			}
+		}
+		if(expr.contains(" y2=")) {
+			final Double resultFour = SVGParser.extractDouble(expr, " y2=");
+			if(resultFour != null) {
+				y2 = resultFour.doubleValue();
+			}
+		}
 		return false;
 	}
-
 	
 
 }
+

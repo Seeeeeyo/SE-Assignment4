@@ -1,15 +1,17 @@
+
 package svg.shape.concretes;
 import svg.element.Element;
 import svg.element.Shape.Shape;
+
 
 public class Circle extends Shape{
 	private double cx;
 	private double cy;
 	private double r;
 	
-	public Circle()
+	public Circle(
 	{
-		super("circle");
+		super("Circle");
 	}
 	public double getCX()
 	{
@@ -43,8 +45,27 @@ public class Circle extends Shape{
 	}
 	@Override
 	public boolean load(String expr) {
-		// TODO Auto-generated method stub
+		if(expr.contains(" cx=")) {
+			final Double result = SVGParser.extractDouble(expr, " cx=");
+			if(result != null) {
+				cx = result.doubleValue();
+			}
+		}
+		if(expr.contains(" cy=")) {
+			final Double resultTwo = SVGParser.extractDouble(expr, " cy=");
+			if(resultTwo != null) {
+				cy = resultTwo.doubleValue();
+			}
+		}
+		if(expr.contains(" r=")) {
+			final Double resultThree = SVGParser.extractDouble(expr, " r=");
+			if(resultThree != null) {
+				r = resultThree.doubleValue();
+			}
+		}
+		
 		return false;
 	}
 
 }
+

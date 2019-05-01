@@ -1,7 +1,10 @@
+
 package svg.shape.concretes;
 
 import svg.element.Element;
 import svg.element.Shape.Shape;
+
+
 
 public class Rect extends Shape{
 	private double x;
@@ -12,8 +15,7 @@ public class Rect extends Shape{
 	private double height;
 	public Rect()
 	{
-		super("rectangle");
-		
+		super("Rectangle");
 	}
 	public double getX()
 	{
@@ -65,6 +67,7 @@ public class Rect extends Shape{
 	{
 		this.ry = ry;
 	}
+	
 	@Override
 	public Element newInstance() {
 		// TODO Auto-generated method stub
@@ -72,14 +75,45 @@ public class Rect extends Shape{
 	}
 	@Override
 	public boolean load(String expr) {
-		// TODO Auto-generated method stub
+		if(expr.contains(" x=")) {
+			final Double result = SVGParser.extractDouble(expr, " x=");
+			if(result != null) {
+				x = result.doubleValue();
+			}
+		}
+		if(expr.contains(" y=")) {
+			final Double resultTwo = SVGParser.extractDouble(expr, " y=");
+			if(resultTwo != null) {
+				y = resultTwo.doubleValue();
+			}
+		}
+		if(expr.contains(" rx=")) {
+			final Double resultThree = SVGParser.extractDouble(expr, " rx=");
+			if(resultThree != null) {
+				rx = resultThree.doubleValue();
+			}
+		}
+		if(expr.contains(" ry=")) {
+			final Double resultFour = SVGParser.extractDouble(expr, " ry=");
+			if(resultFour != null) {
+				ry = resultFour.doubleValue();
+			}
+		}
+		if(expr.contains(" width=")) {
+			final Double resultFive = SVGParser.extractDouble(expr, " width=");
+			if(resultFive != null) {
+				width = resultFive.doubleValue();
+			}
+		}
+		if(expr.contains(" height=")) {
+			final Double resultSix = SVGParser.extractDouble(expr, " height=");
+			if(resultSix != null) {
+				height = resultSix.doubleValue();
+			}
+		}
 		return false;
 	}
 	
-	/**public static void main(String[] args)
-	{
-		rect Rectangle = new rect(10.0,10.0,0.0,0.0,30.0,30.0);
-		
-	}*/
 	
 }
+
