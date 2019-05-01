@@ -1,7 +1,7 @@
-package svg.shape;
+package svg.shape.concretes;
 
-import svg.SVGParser;
 import svg.element.Element;
+import svg.element.Shape.Shape;
 
 public class PathOp extends Shape{
 	private boolean absolute;
@@ -9,7 +9,7 @@ public class PathOp extends Shape{
 	
 	//constructor
 	public PathOp() {
-		super("path");
+		super("pathOP");
 		
 	}
 	

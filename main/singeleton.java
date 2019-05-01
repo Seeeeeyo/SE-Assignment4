@@ -1,6 +1,13 @@
-import com.sun.xml.internal.rngom.parse.host.Base;
+package main;
 import svg.element.Element;
 import svg.element.Shape.Shape;
+import svg.shape.concretes.Circle;
+import svg.shape.concretes.Ellispe;
+import svg.shape.concretes.Line;
+import svg.shape.concretes.Point2D;
+import svg.shape.concretes.Polygon;
+import svg.shape.concretes.Polyline;
+import svg.shape.concretes.Rect;
 
 import java.util.List;
 import java.util.Scanner;
@@ -21,7 +28,7 @@ public class singeleton {
             new Rect(),
             new Polygon(),
             new Point2D(),
-            new Polyline(),
+            new Polyline(null),
             new Line()
         }
         );

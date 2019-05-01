@@ -1,0 +1,29 @@
+package svg.shape.concretes;
+
+public class MoveTo
+{
+	private double x;
+	private double y;
+	
+	public MoveTo()
+	{
+	}
+	public double getX()
+	{
+		return x;
+	}
+	public double getY()
+	{
+		return y;
+	}
+	public void setX(double x)
+	{
+		this.x = x;
+	}
+	public void setY(double y)
+	{
+		this.y = y;
+	}
+	
+	
+}
